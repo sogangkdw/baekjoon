@@ -2,14 +2,15 @@
 #include <stdlib.h>
 
 int main(void){
+    typedef struct list* List;
     typedef struct list{
         int num;
-        struct list* next;
-    }L;
+        List next;
+    };
 
-    L* ptr=NULL;
+    List ptr=NULL;
     if(!ptr){
-        ptr=malloc(sizeof(L));
+        ptr=malloc(sizeof(struct list));
         ptr->num=4;
         ptr->next=NULL;
     }
